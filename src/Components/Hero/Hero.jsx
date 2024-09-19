@@ -3,8 +3,12 @@ import "./Hero.css"
 
 export default function Hero() {
     return (
-        <div className='hero'>
-
+        <div className='hero container'>
+            <div className="hero-text">
+                <h1>We Ensure Better Education For Better World</h1>
+                <p>Our cutting-edge curriculum is desinged to empower students with the knowledge skills, and experince needed to excel in the dynamic field of education </p>
+                <button className='btn'>Explore More</button>
+            </div>
         </div>
     )
 }
