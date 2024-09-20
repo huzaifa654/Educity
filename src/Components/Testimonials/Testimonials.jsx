@@ -41,11 +41,15 @@ const UserInfo = ({ name, city, desc, source }) => {
         <li>
             <div className="slide">
                 <div className="userinfo">
-                    <img src={source} alt="" />
-                    <div>
-                        <h3>{name}</h3>
-                        <span>{city}</span>
+                    <div className='userContainer'>
+                        <img src={source} alt="" />
+                        <div>
+                            <h3>{name}</h3>
+                            <span>{city}</span>
+                        </div>
                     </div>
+
+
                     <p>{desc}</p>
                 </div>
 
@@ -58,19 +62,21 @@ const UserInfo = ({ name, city, desc, source }) => {
 
 export default function Testimonials() {
 
-    const slider = useRef()
+    const slider = useRef(null)
     let tx = 0;
-    console.log("tx-------------", tx)
+
     const slideForward = () => {
-        console.log("slideForward===", tx)
         if (tx > -50) {
             tx -= 25
         }
-        slider.current.style.transform = `translateX(${tx}%);`
+        slider.current.style.transform = `translateX(${tx}%)`
 
     }
     const slideBackward = () => {
-
+        if (tx < 0) {
+            tx += 25
+        }
+        slider.current.style.transform = `translateX(${tx}%)`
     }
     return (
         <div className='testimonials container'>

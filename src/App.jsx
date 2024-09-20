@@ -19,6 +19,7 @@ export default function App() {
       <Campus />
       <Title subTitle={"TESTIMONIALS"} title={"What Students Says"} />
       <Testimonials />
+      <Title subTitle={"CONTACT US"} title={"Get In Touch"} />
 
     </div>
   )
