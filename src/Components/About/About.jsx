@@ -4,12 +4,12 @@ import playicon from "../../assets/playicon.png"
 import about from "../../assets/about.png"
 
 
-export default function About() {
+export default function About({ setPlay }) {
     return (
         <div className='About container'>
             <div className="about-left">
                 <img src={about} alt="" className='aboutImg' />
-                <img src={playicon} alt="" className='playicon' />
+                <img src={playicon} alt="" className='playicon' onClick={() => setPlay(true)} />
             </div>
             <div className="about-right">
                 <h3>ABOUT UNIVERSITY</h3>
